@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{658991A3-1B2A-4F4C-9C29-80C057593528}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CloudBox</RootNamespace>
+    <AssemblyName>CloudBox</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/CloudBox/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignPatterns\Factory.cs" />
+    <Compile Include="DesignPatterns\IFactory.cs" />
+    <Compile Include="DesignPatterns\IIndexCache.cs" />
+    <Compile Include="DesignPatterns\IndexCache.cs" />
+    <Compile Include="DesignPatterns\IPoolable.cs" />
+    <Compile Include="DesignPatterns\TDictionaryPool.cs" />
+    <Compile Include="DesignPatterns\TIndexCache.cs" />
+    <Compile Include="DesignPatterns\TObjectPool.cs" />
+    <Compile Include="DesignPatterns\TReflectionFactory.cs" />
+    <Compile Include="DesignPatterns\TSingleton.cs" />
+    <Compile Include="DesignPatterns\_IndexCache.cs" />
+    <Compile Include="General\CBDirectory.cs" />
+    <Compile Include="Hook\HookManager.cs" />
+    <Compile Include="Hook\KeyboardInfo.cs" />
+    <Compile Include="Hook\MouseHookStruct.cs" />
+    <Compile Include="IO\CBFile.cs" />
+    <Compile Include="Log\CBILogControl.cs" />
+    <Compile Include="Log\CBILogger.cs" />
+    <Compile Include="Log\CBIRelease.cs" />
+    <Compile Include="Log\CBLogQueue.cs" />
+    <Compile Include="Performance\MemoryDetector.cs" />
+    <Compile Include="Performance\MemoryInfo.cs" />
+    <Compile Include="Performance\UCMemoryMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Performance\UCMemoryMonitor.designer.cs">
+      <DependentUpon>UCMemoryMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Policy\FileName\CBFileName.cs" />
+    <Compile Include="Policy\FileName\CBFileTest.cs" />
+    <Compile Include="Policy\FileName\CBIFilenameExtensionPolicy.cs" />
+    <Compile Include="Policy\FileName\CBIFileNamePolicy.cs" />
+    <Compile Include="Policy\CBINamePolicy.cs" />
+    <Compile Include="Policy\FileName\CBIFileNameControlPolicy.cs" />
+    <Compile Include="Policy\CBIPolicy.cs" />
+    <Compile Include="Log\CBConsoleLogger.cs" />
+    <Compile Include="Log\CBDebugLogger.cs" />
+    <Compile Include="Log\CBILog.cs" />
+    <Compile Include="Log\CBLog.cs" />
+    <Compile Include="Log\CBLogger.cs" />
+    <Compile Include="Log\CBLogType.cs" />
+    <Compile Include="Log\CBTextLogger.cs" />
+    <Compile Include="Log\CBXmlLogger.cs" />
+    <Compile Include="Mapping\CBMappingFile.cs" />
+    <Compile Include="NetowrkStatus\NetworkInfo.cs" />
+    <Compile Include="NetowrkStatus\NetworkManager.cs" />
+    <Compile Include="NetowrkStatus\WinINET.cs" />
+    <Compile Include="Performance\Performance.cs" />
+    <Compile Include="Policy\CBIRPolicy.cs" />
+    <Compile Include="Policy\SQL\CBIConditionPolicy.cs" />
+    <Compile Include="Policy\SQL\CBISqlCmdPolicy.cs" />
+    <Compile Include="Policy\SQL\CBIStatementPolicy.cs" />
+    <Compile Include="Policy\SQL\CBSQL.cs" />
+    <Compile Include="Policy\SQL\CBIStatementFormatter.cs" />
+    <Compile Include="Policy\SQL\TestObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Log\CBLogInfo.cs" />
+    <Compile Include="Serialize\SerializeManager.cs" />
+    <Compile Include="TCPObject\ClientStatus.cs" />
+    <Compile Include="TCPObject\LogLevel.cs" />
+    <Compile Include="TCPObject\MessageConst.cs" />
+    <Compile Include="TCPObject\MessageContent.cs" />
+    <Compile Include="TCPObject\MessageHeader.cs" />
+    <Compile Include="TCPObject\TCPIPClient.cs" />
+    <Compile Include="TCPObject\TCPIPServer.cs" />
+    <Compile Include="TCPObject\TCPSocket.cs" />
+    <Compile Include="WindowsAPI\AccurateTimer.cs" />
+    <Compile Include="WindowsAPI\Declare.cs" />
+    <Compile Include="WindowsAPI\MappingFile.cs" />
+    <Compile Include="WindowsAPI\Neighbors .cs" />
+    <Compile Include="WindowsAPI\NetAdapter.cs" />
+    <Compile Include="WindowsAPI\SystemTime.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Performance\UCMemoryMonitor.resx">
+      <DependentUpon>UCMemoryMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
